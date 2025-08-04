@@ -4,6 +4,15 @@ This is a full-stack web application for Onalenna Rehabilitation Hub, Botswana's
 
 The application uses a modern React frontend with shadcn/ui components and a simple Express.js backend, designed to handle both informational content delivery and basic data operations through a PostgreSQL database setup.
 
+## Recent Changes
+
+- Migrated from Lovable to Replit environment successfully
+- Updated all branding from Lovable to Onalenna Rehabilitation Hub
+- Added comprehensive SEO meta tags and Open Graph tags
+- Enhanced favicon and branding consistency
+- Increased logo size and improved navigation responsiveness
+- Fixed Tailwind CSS configuration for custom gradients and shadows
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

@@ -12,8 +12,8 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/65ad3b48-6099-4ffb-a76b-7d8f191af6d0.png" 
-                alt="ORH Logo" 
+                src="/onalenna-logo.png" 
+                alt="Onalenna Rehabilitation Hub Logo" 
                 className="h-8 w-8 object-contain"
               />
               <div>
