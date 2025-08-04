@@ -23,7 +23,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/65ad3b48-6099-4ffb-a76b-7d8f191af6d0.png" 
               alt="Onalenna Rehabilitation Hub Logo" 
-              className="h-16 w-16 object-contain"
+              className="h-32 w-32 object-contain"
             />
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-primary">Onalenna Rehabilitation Hub</h1>
