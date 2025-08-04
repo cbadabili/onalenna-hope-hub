@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Building, Users, Target, DollarSign, Calendar } from "lucide-react";
+import { Shield, Building, Users, Target, DollarSign, Calendar } from "lucide-react";
 import { buttonActions } from "@/utils/buttonActions";
 
 const GiveHopeSection = () => {
@@ -10,7 +10,7 @@ const GiveHopeSection = () => {
     {
       amount: "BWP 200",
       impact: "Provides crisis counseling session for one person",
-      icon: Heart
+      icon: Shield
     },
     {
       amount: "BWP 1,000",

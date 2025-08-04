@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Heart, Users, Shield, Phone, MessageCircle } from "lucide-react";
+import { Brain, HeadphonesIcon, Users, Shield, Phone, MessageCircle } from "lucide-react";
 import { buttonActions } from "@/utils/buttonActions";
 
 const GetHelpSection = () => {
@@ -13,7 +13,7 @@ const GetHelpSection = () => {
       features: ["Individual counseling", "Group therapy", "Medical support", "Relapse prevention"]
     },
     {
-      icon: Heart,
+      icon: HeadphonesIcon,
       title: "Mental Health Support",
       description: "Professional mental health services addressing underlying psychological conditions.",
       features: ["Depression treatment", "Anxiety management", "Trauma therapy", "Emotional regulation"]
@@ -160,7 +160,7 @@ const GetHelpSection = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-hope rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-8 w-8 text-white" />
+                <Users className="h-8 w-8 text-white" />
               </div>
               <h4 className="text-lg font-semibold text-foreground mb-2">Family Support Groups</h4>
               <p className="text-muted-foreground text-sm leading-relaxed">

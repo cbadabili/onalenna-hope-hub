@@ -1,4 +1,4 @@
-import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { Shield, Phone, Mail, MapPin } from "lucide-react";
 import { buttonActions } from "@/utils/buttonActions";
 
 const Footer = () => {
@@ -25,7 +25,7 @@ const Footer = () => {
               restoring hope, and rebuilding families.
             </p>
             <div className="flex items-center gap-2 text-sm">
-              <Heart className="h-4 w-4 text-accent" />
+              <Shield className="h-4 w-4 text-accent" />
               <span className="text-primary-foreground/80">Free services for all Batswana</span>
             </div>
           </div>

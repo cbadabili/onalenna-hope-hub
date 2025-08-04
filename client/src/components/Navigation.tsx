@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Heart } from "lucide-react";
+import { Menu, X, Phone, Shield } from "lucide-react";
 import { buttonActions } from "@/utils/buttonActions";
 
 const Navigation = () => {
@@ -51,7 +51,7 @@ const Navigation = () => {
               Get Help Now
             </Button>
             <Button variant="hope" size="sm" className="flex items-center gap-2" onClick={() => buttonActions.scrollToSection('give-hope')}>
-              <Heart className="h-4 w-4" />
+              <Shield className="h-4 w-4" />
               Donate
             </Button>
           </div>
@@ -89,7 +89,7 @@ const Navigation = () => {
                   Get Help Now
                 </Button>
                 <Button variant="hope" className="w-full" onClick={() => buttonActions.scrollToSection('give-hope')}>
-                  <Heart className="h-4 w-4 mr-2" />
+                  <Shield className="h-4 w-4 mr-2" />
                   Donate
                 </Button>
               </div>

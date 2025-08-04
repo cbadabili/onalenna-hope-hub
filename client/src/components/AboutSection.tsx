@@ -1,10 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, Target, Globe } from "lucide-react";
+import { Shield, Users, Target, Globe } from "lucide-react";
 
 const AboutSection = () => {
   const values = [
     {
-      icon: Heart,
+      icon: Shield,
       title: "Compassionate Care",
       description: "Non-judgmental, evidence-based treatment rooted in empathy and understanding."
     },
