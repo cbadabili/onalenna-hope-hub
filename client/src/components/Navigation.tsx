@@ -17,17 +17,17 @@ const Navigation = () => {
   return (
     <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20 lg:h-24">
           {/* Logo Section */}
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/65ad3b48-6099-4ffb-a76b-7d8f191af6d0.png" 
               alt="Onalenna Rehabilitation Hub Logo" 
-              className="h-32 w-32 object-contain"
+              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain"
             />
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-primary">Onalenna Rehabilitation Hub</h1>
-              <p className="text-xs text-muted-foreground">Transforming Lives, Restoring Hope</p>
+              <h1 className="text-lg lg:text-xl font-bold text-primary">Onalenna Rehabilitation Hub</h1>
+              <p className="text-xs lg:text-sm text-muted-foreground">Transforming Lives, Restoring Hope</p>
             </div>
           </div>
 
