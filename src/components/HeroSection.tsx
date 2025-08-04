@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, MapPin } from "lucide-react";
+import { buttonActions } from "@/utils/buttonActions";
 
 const HeroSection = () => {
   return (
@@ -35,6 +36,7 @@ const HeroSection = () => {
                 variant="crisis" 
                 size="xl" 
                 className="flex items-center gap-3 shadow-strong"
+                onClick={() => buttonActions.scrollToSection('get-help')}
               >
                 <Phone className="h-5 w-5" />
                 Get Help Now - It's Free
@@ -44,6 +46,7 @@ const HeroSection = () => {
                 variant="gentle" 
                 size="xl" 
                 className="flex items-center gap-3 bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-primary"
+                onClick={() => buttonActions.scrollToSection('give-hope')}
               >
                 <Heart className="h-5 w-5" />
                 Give Hope - Donate Today

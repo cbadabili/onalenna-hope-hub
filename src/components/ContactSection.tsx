@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Shield, MessageCircle } from "lucide-react";
+import { buttonActions } from "@/utils/buttonActions";
 
 const ContactSection = () => {
   return (
@@ -200,21 +201,23 @@ const ContactSection = () => {
                   </label>
                 </div>
 
-                <div className="space-y-3">
-                  <Button variant="hero" className="w-full" size="lg">
-                    Send Secure Message
-                  </Button>
-                  
-                  <div className="text-center">
-                    <p className="text-xs text-muted-foreground mb-2">
-                      Need immediate help? Don't wait for a response.
-                    </p>
-                    <Button variant="crisis" size="sm">
-                      <Phone className="h-4 w-4 mr-2" />
-                      Call Crisis Line Now
+                <form onSubmit={buttonActions.submitContactForm}>
+                  <div className="space-y-3">
+                    <Button variant="hero" className="w-full" size="lg" type="submit">
+                      Send Secure Message
                     </Button>
+                    
+                    <div className="text-center">
+                      <p className="text-xs text-muted-foreground mb-2">
+                        Need immediate help? Don't wait for a response.
+                      </p>
+                      <Button variant="crisis" size="sm" type="button" onClick={buttonActions.callCrisisLine}>
+                        <Phone className="h-4 w-4 mr-2" />
+                        Call Crisis Line Now
+                      </Button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </CardContent>
             </Card>
           </div>

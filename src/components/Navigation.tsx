@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Heart } from "lucide-react";
+import { buttonActions } from "@/utils/buttonActions";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,11 +46,11 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="crisis" size="sm" className="flex items-center gap-2">
+            <Button variant="crisis" size="sm" className="flex items-center gap-2" onClick={buttonActions.callCrisisLine}>
               <Phone className="h-4 w-4" />
               Get Help Now
             </Button>
-            <Button variant="hope" size="sm" className="flex items-center gap-2">
+            <Button variant="hope" size="sm" className="flex items-center gap-2" onClick={() => buttonActions.scrollToSection('give-hope')}>
               <Heart className="h-4 w-4" />
               Donate
             </Button>
@@ -83,11 +84,11 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="crisis" className="w-full">
+                <Button variant="crisis" className="w-full" onClick={buttonActions.callCrisisLine}>
                   <Phone className="h-4 w-4 mr-2" />
                   Get Help Now
                 </Button>
-                <Button variant="hope" className="w-full">
+                <Button variant="hope" className="w-full" onClick={() => buttonActions.scrollToSection('give-hope')}>
                   <Heart className="h-4 w-4 mr-2" />
                   Donate
                 </Button>

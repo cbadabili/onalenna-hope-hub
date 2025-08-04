@@ -3,21 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Building, Users, Target, DollarSign, Calendar } from "lucide-react";
+import { buttonActions } from "@/utils/buttonActions";
 
 const GiveHopeSection = () => {
   const donationLevels = [
     {
-      amount: "$10",
+      amount: "BWP 200",
       impact: "Provides crisis counseling session for one person",
       icon: Heart
     },
     {
-      amount: "$50",
+      amount: "BWP 1,000",
       impact: "Funds one week of group therapy sessions",
       icon: Users
     },
     {
-      amount: "$100",
+      amount: "BWP 2,000",
       impact: "Supports family counseling program for one month",
       icon: Building
     },
@@ -32,29 +33,29 @@ const GiveHopeSection = () => {
     {
       phase: "Phase 1",
       title: "Foundation & Core Facilities",
-      amount: "$500K",
+      amount: "BWP 10M",
       description: "Essential infrastructure, counseling rooms, administrative offices",
       status: "current"
     },
     {
       phase: "Phase 2", 
       title: "Residential Treatment Center",
-      amount: "$1.5M",
+      amount: "BWP 30M",
       description: "Accommodation facilities, medical units, dining facilities",
       status: "planned"
     },
     {
       phase: "Phase 3",
       title: "Specialized Programs & Outreach",
-      amount: "$2M",
+      amount: "BWP 40M",
       description: "Youth programs, family centers, community outreach facilities",
       status: "planned"
     }
   ];
 
   // Simulated progress - in real implementation this would come from backend
-  const currentFunding = 125000; // $125K raised
-  const totalGoal = 500000; // $500K for Phase 1
+  const currentFunding = 2500000; // BWP 2.5M raised
+  const totalGoal = 10000000; // BWP 10M for Phase 1
   const progressPercentage = (currentFunding / totalGoal) * 100;
 
   return (
@@ -83,10 +84,10 @@ const GiveHopeSection = () => {
           <div className="max-w-2xl mx-auto mb-8">
             <div className="flex justify-between items-center mb-4">
               <span className="text-sm font-medium text-muted-foreground">
-                ${currentFunding.toLocaleString()} raised
+                BWP {currentFunding.toLocaleString()} raised
               </span>
               <span className="text-sm font-medium text-muted-foreground">
-                ${totalGoal.toLocaleString()} goal
+                BWP {totalGoal.toLocaleString()} goal
               </span>
             </div>
             <Progress value={progressPercentage} className="h-3 bg-secondary" />
@@ -107,7 +108,7 @@ const GiveHopeSection = () => {
               <div className="text-sm text-muted-foreground">Corporate Partners</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-primary mb-1">$375K</div>
+              <div className="text-2xl font-bold text-primary mb-1">BWP 7.5M</div>
               <div className="text-sm text-muted-foreground">Remaining for Phase 1</div>
             </div>
           </div>
@@ -136,6 +137,7 @@ const GiveHopeSection = () => {
                     variant="hero" 
                     className="w-full" 
                     size="sm"
+                    onClick={() => buttonActions.donate(level.amount !== "Custom" ? level.amount : undefined)}
                   >
                     Donate {level.amount !== "Custom" ? level.amount : "Now"}
                   </Button>
@@ -145,7 +147,7 @@ const GiveHopeSection = () => {
           </div>
 
           <div className="text-center">
-            <Button variant="hope" size="xl" className="shadow-strong">
+            <Button variant="hope" size="xl" className="shadow-strong" onClick={() => buttonActions.donate()}>
               <DollarSign className="h-5 w-5 mr-2" />
               Make a One-Time Donation
             </Button>
@@ -209,11 +211,11 @@ const GiveHopeSection = () => {
                 </p>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg">
+                <Button variant="hero" size="lg" onClick={buttonActions.viewMasterPlan}>
                   <Building className="h-5 w-5 mr-2" />
                   View Master Plan
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={buttonActions.viewDevelopmentTimeline}>
                   <Calendar className="h-5 w-5 mr-2" />
                   Development Timeline
                 </Button>

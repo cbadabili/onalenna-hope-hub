@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Heart, Users, Shield, Phone, MessageCircle } from "lucide-react";
+import { buttonActions } from "@/utils/buttonActions";
 
 const GetHelpSection = () => {
   const services = [
@@ -69,11 +70,11 @@ const GetHelpSection = () => {
             If you or someone you know is in crisis, don't wait. Help is available 24/7.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="crisis" size="lg" className="bg-white text-primary hover:bg-white/90">
+            <Button variant="crisis" size="lg" className="bg-white text-primary hover:bg-white/90" onClick={buttonActions.callCrisisLine}>
               <Phone className="h-5 w-5 mr-2" />
               Call Crisis Line: +267 72808110
             </Button>
-            <Button variant="gentle" size="lg" className="bg-white/20 text-white border-white/30 hover:bg-white hover:text-primary">
+            <Button variant="gentle" size="lg" className="bg-white/20 text-white border-white/30 hover:bg-white hover:text-primary" onClick={buttonActions.chatWithCounselor}>
               <MessageCircle className="h-5 w-5 mr-2" />
               Chat with Counselor
             </Button>
@@ -189,7 +190,7 @@ const GetHelpSection = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" onClick={buttonActions.familyConsultation}>
               Schedule Family Consultation
             </Button>
           </div>

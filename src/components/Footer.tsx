@@ -1,4 +1,5 @@
 import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { buttonActions } from "@/utils/buttonActions";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -88,16 +89,16 @@ const Footer = () => {
               
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <a href="tel:+26772808110" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <button onClick={buttonActions.callCrisisLine} className="text-primary-foreground/80 hover:text-white transition-colors">
                   +267 72808110
-                </a>
+                </button>
               </div>
               
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:admin@onalenna.org" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <button onClick={() => buttonActions.sendEmail()} className="text-primary-foreground/80 hover:text-white transition-colors">
                   admin@onalenna.org
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -111,15 +112,15 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-primary-foreground/80 hover:text-white transition-colors">
+              <button onClick={() => alert('Privacy Policy will be available soon.')} className="text-primary-foreground/80 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-white transition-colors">
+              </button>
+              <button onClick={() => alert('Terms of Service will be available soon.')} className="text-primary-foreground/80 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-white transition-colors">
+              </button>
+              <button onClick={() => buttonActions.scrollToSection('give-hope')} className="text-primary-foreground/80 hover:text-white transition-colors">
                 Donate
-              </a>
+              </button>
             </div>
           </div>
           
